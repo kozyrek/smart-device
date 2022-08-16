@@ -1,0 +1,98 @@
+.main-screen {
+  padding: 305px 0 280px;
+  color: $color-alice-blue;
+  background-color: #1a2f3e;
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url('../img/background/main-screen-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url('../img/background/main-screen-desktop@2x.jpg');
+  }
+
+  @include vp-1023 {
+    padding: 179px 0 205px;
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url('../img/background/main-screen-tablet.jpg');
+
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url('../img/background/main-screen-tablet@2x.jpg');
+    }
+  }
+
+  @include vp-767 {
+    padding: 151px 0 190px;
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url('../img/background/main-screen-mobile.jpg');
+
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url('../img/background/main-screen-mobile@2x.jpg');
+    }
+  }
+}
+
+.main-screen h1 {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 80px;
+  line-height: 94px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0 0 35px;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+    margin: 0 0 2px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 0 8px;
+  }
+}
+
+.main-screen p {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 400;
+  margin: 0 0 43px;
+  max-width: 670px;
+
+  @include vp-1023 {
+    margin: 0 0 56px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 44px;
+  }
+}
+
+.main-screen__button {
+  display: block;
+
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.main-screen__button span {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.main-screen__button .main-screen__button-text {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}

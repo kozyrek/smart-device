@@ -1,0 +1,44 @@
+.button {
+  padding: 10px 15px 12px;
+  width: 160px;
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+  color: $color-alice-blue;
+  background-color: transparent;
+  user-select: none;
+  cursor: pointer;
+
+  // &:hover,
+  // &:focus {
+  //   color: rgba(1, 28, 64, 0.6);
+  // }
+
+  // &:active {
+  //   color: $color-tangaroa;
+  //   opacity: 0.8;
+  // }
+}
+
+.button--main-screen {
+  padding: 15px 25px 19px;
+  width: 410px;
+  font-size: 18px;
+  line-height: 21px;
+  border: none;
+  background-color: $color-deep-sky-blue;
+
+  @include vp-767 {
+    padding: 12px 30px 12px;
+    width: 100%;
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
