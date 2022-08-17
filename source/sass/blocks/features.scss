@@ -20,6 +20,8 @@
 
   @include vp-767 {
     display: block;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
