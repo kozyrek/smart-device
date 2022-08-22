@@ -1317,7 +1317,7 @@ a {
   .accordion__button::before,
   .accordion__button::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 25px;
     right: 1px;
     width: 15px;

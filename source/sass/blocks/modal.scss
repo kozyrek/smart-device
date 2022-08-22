@@ -38,10 +38,10 @@
     height: 1.2px;
     border-radius: 5px;
     background-color: $color-white;
-    transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0)
+    transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
   }
 
   &::after {
-    transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0)
+    transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
   }
 }

@@ -1,6 +1,6 @@
 .page-header {
   padding: 30px 0 35px;
-  background: linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);;
+  background: linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
   position: fixed;
   top: 0;
   left: 0;
@@ -98,11 +98,11 @@
 }
 
 .page-header__link--email {
-  background-image: url('../img/background/email.svg');
+  background-image: url("../img/background/email.svg");
 }
 
 .page-header__link--phone {
-  background-image: url('../img/background/phone.svg');
+  background-image: url("../img/background/phone.svg");
 }
 
 .page-header__link span {
