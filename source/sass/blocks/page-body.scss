@@ -3,18 +3,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // font-family: "Montserrat", "Arial", sans-serif;
-  // font-size: 16px;
-  // line-height: 24px;
-  // font-weight: 400;
-  // color: $color-tangaroa;
-  // background-color: $color-alice-blue;
+  background-color: $color-alice-blue-background;
+}
 
-  // @include vp-1023 {
-  //   max-width: 1023px;
-  // }
-
-  // @include vp-767 {
-  //   max-width: 767px;
-  // }
+.page-body__lock {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
 }

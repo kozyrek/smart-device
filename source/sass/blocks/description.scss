@@ -89,4 +89,13 @@
     width: 160px;
     padding: 8px 10px 9px;
   }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $color-deep-sky-blue;
+  }
+
+  &:active {
+    outline: 2px solid $color-deep-sky-blue;
+  }
 }

@@ -1,28 +1,28 @@
-// import {iosVhFix} from './utils/ios-vh-fix';
-// import {initModals} from './modules/modals/init-modals';
-
+import {removeClassNoJs} from './modules/on-js';
 import {openAccordion} from './modules/open-accordion';
 import {openDetails} from './modules/open-details';
+import {closeModal, openModal} from './modules/open-modal';
+import {setStorage} from './modules/set-storage';
+import {getMaskInput} from './modules/validate-phonenumber';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
-  // iosVhFix();
-
   // Modules
   // ---------------------------------
 
+  removeClassNoJs();
   openAccordion();
+  setStorage();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    // initModals();
     openDetails();
+    openModal();
+    closeModal();
+    getMaskInput();
   });
 });
 
