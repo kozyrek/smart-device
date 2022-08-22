@@ -81,6 +81,20 @@ const closeModal = () => {
       }
     }
   });
+
+  modal.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      setClass();
+      buttonOpen.focus();
+
+      if (existVerticalScroll()) {
+        window.scrollTo(0, page.dataset.scrollY);
+      }
+    }
+  });
+
+
 };
 
 export {openModal, closeModal};
