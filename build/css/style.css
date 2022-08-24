@@ -164,10 +164,15 @@ a {
 }
 
 .page-header__link {
-  display: block;
+  display: inline-block;
+  vertical-align: bottom;
   padding: 1px 5px 9px 35px;
   background-repeat: no-repeat;
   background-position: 0 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .page-header__link:hover,
@@ -242,6 +247,7 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .page-footer__logo {
@@ -255,7 +261,7 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 215px;
+  max-width: 220px;
 }
 
 .page-footer__social-item {
@@ -292,11 +298,12 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 5px;
   max-width: 845px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
 .accordion--active .accordion__list {
@@ -315,6 +322,16 @@ a {
   color: #ffffff;
   border: none;
   background-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.accordion--site-section {
+  -webkit-box-flex: 0.3;
+  -ms-flex-positive: 0.3;
+  flex-grow: 0.3;
 }
 
 .accordion--contacts {
@@ -329,14 +346,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
-  max-height: 150px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 4px;
+  -moz-column-gap: 4px;
+  column-gap: 4px;
 }
 
 .accordion__item {
@@ -354,6 +369,10 @@ a {
   line-height: 22px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .accordion__link:hover,
@@ -392,11 +411,13 @@ a {
 
 .button:hover,
 .button:focus {
-  outline: 1px solid #f2f5f6;
+  -webkit-box-shadow: 0 0 0 1px #f2f5f6;
+  box-shadow: 0 0 0 1px #f2f5f6;
 }
 
 .button:active {
-  outline: 2px solid #f2f5f6;
+  -webkit-box-shadow: 0 0 0 2px #f2f5f6;
+  box-shadow: 0 0 0 2px #f2f5f6;
 }
 
 .button--main-screen {
@@ -410,12 +431,13 @@ a {
 
 .button--main-screen:hover,
 .button--main-screen:focus {
-  background-color: rgba(0, 178, 255, 0.7);
-  outline: none;
+  -webkit-box-shadow: 0 0 0 1px #00b2ff;
+  box-shadow: 0 0 0 1px #00b2ff;
 }
 
 .button--main-screen:active {
-  background-color: rgba(0, 178, 255, 0.5);
+  -webkit-box-shadow: 0 0 0 2px #00b2ff;
+  box-shadow: 0 0 0 2px #00b2ff;
 }
 
 .features {
@@ -498,6 +520,7 @@ a {
   background-image: url("../img/background/about-us-icon.svg");
   background-repeat: no-repeat;
   background-position: 30px 20px;
+  min-height: 400px;
 }
 
 .description h2 {
@@ -534,11 +557,13 @@ a {
 
 .description__button:hover,
 .description__button:focus {
-  outline: 1px solid #00b2ff;
+  -webkit-box-shadow: 0 0 0 1px #00b2ff;
+  box-shadow: 0 0 0 1px #00b2ff;
 }
 
 .description__button:active {
-  outline: 2px solid #00b2ff;
+  -webkit-box-shadow: 0 0 0 2px #00b2ff;
+  box-shadow: 0 0 0 2px #00b2ff;
 }
 
 .products {
@@ -593,6 +618,10 @@ a {
 
 .products__link {
   position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .products__link::before,
@@ -656,6 +685,7 @@ a {
   color: #ffffff;
   background-color: #00b3ff;
   position: relative;
+  overflow: hidden;
 }
 
 .feedback-form::before {
@@ -663,7 +693,7 @@ a {
   content: "";
   top: 0;
   left: 0;
-  bottom: -100%;
+  bottom: -200%;
   width: 50%;
   background-color: rgba(4, 24, 39, 0.5);
   -webkit-transform-origin: 100% 0;
@@ -817,11 +847,13 @@ a {
 
 .feedback-form button:hover,
 .feedback-form button:focus {
-  outline: 2px solid #041427;
+  -webkit-box-shadow: 0 0 0 2px #041427;
+  box-shadow: 0 0 0 2px #041427;
 }
 
 .feedback-form button:active {
-  outline: 3px solid #041427;
+  -webkit-box-shadow: 0 0 0 3px #041427;
+  box-shadow: 0 0 0 3px #041427;
 }
 
 .feedback-form input[type="checkbox"] + label {
@@ -895,6 +927,11 @@ a {
   max-width: 100%;
 }
 
+.feedback-form--modal input[type="checkbox"] {
+  left: 50px;
+  bottom: 37px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -919,6 +956,7 @@ a {
   top: 15px;
   right: 15px;
   background-color: transparent;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -943,6 +981,17 @@ a {
   transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
 }
 
+.modal .modal__close-button:hover,
+.modal .modal__close-button:focus {
+  -webkit-box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+.modal .modal__close-button:active {
+  -webkit-box-shadow: 0 0 0 2px #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
 .no-js .no-js__page-header-button {
   display: none;
 }
@@ -961,6 +1010,14 @@ a {
     color: $color-default-white;
   }
 } */
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .main-screen {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/main-screen-desktop@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-desktop@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-desktop@2x.jpg");
+  }
+}
 
 @media (max-width: 1023px) {
   .wrapper {
@@ -1212,7 +1269,7 @@ a {
   }
 
   .main-screen {
-    padding: 151px 0 189px;
+    padding: 150px 0 190px;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/main-screen-mobile.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-mobile.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-mobile.jpg");
@@ -1294,7 +1351,7 @@ a {
   }
 
   .accordion--active .accordion__button {
-    padding: 20px 0 17px;
+    padding: 20px 20px 17px 0;
   }
 
   .accordion--active .accordion__button::after {
@@ -1307,7 +1364,7 @@ a {
 
   .accordion__button {
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 20px 20px 0;
     width: 100%;
     text-align: left;
     cursor: pointer;
@@ -1369,7 +1426,6 @@ a {
   .button--main-screen {
     padding: 12px 30px 12px;
     width: 100%;
-    max-width: 350px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -1421,6 +1477,7 @@ a {
   }
 
   .description {
+    min-height: auto;
     padding-top: 6px;
     background-image: none;
   }
@@ -1517,7 +1574,6 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 0;
-    max-width: 400px;
     margin: 0 auto;
   }
 
@@ -1532,7 +1588,7 @@ a {
   }
 
   .feedback-form button {
-    max-width: 270px;
+    max-width: none;
     margin: 0 auto 25px;
   }
 
@@ -1579,13 +1635,5 @@ a {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/main-screen-mobile@2x.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-mobile@2x.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-mobile@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .main-screen {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/main-screen-desktop@2x.jpg");
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-desktop@2x.jpg");
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-desktop@2x.jpg");
   }
 }

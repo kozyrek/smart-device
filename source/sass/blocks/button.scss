@@ -17,11 +17,11 @@
 
   &:hover,
   &:focus {
-    outline: 1px solid $color-alice-blue;
+    box-shadow: 0 0 0 1px $color-alice-blue;
   }
 
   &:active {
-    outline: 2px solid $color-alice-blue;
+    box-shadow: 0 0 0 2px $color-alice-blue;
   }
 }
 
@@ -36,18 +36,16 @@
   @include vp-767 {
     padding: 12px 30px 12px;
     width: 100%;
-    max-width: 350px;
     font-size: 14px;
     line-height: 16px;
   }
 
   &:hover,
   &:focus {
-    background-color: rgba($color: $color-deep-sky-blue, $alpha: 0.7);
-    outline: none;
+    box-shadow: 0 0 0 1px $color-deep-sky-blue;
   }
 
   &:active {
-    background-color: rgba($color: $color-deep-sky-blue, $alpha: 0.5);
+    box-shadow: 0 0 0 2px $color-deep-sky-blue;
   }
 }

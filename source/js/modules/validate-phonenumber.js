@@ -43,10 +43,6 @@ let onPhoneKeyDown = (evt) => {
   if (input.value === '') {
     input.value = '+7(';
   }
-
-  if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
-    input.value = '';
-  }
 };
 
 let onPhonePaste = (evt) => {

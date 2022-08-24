@@ -92,6 +92,7 @@
 
 .products__link {
   position: relative;
+  user-select: none;
 
   &::before,
   &::after {

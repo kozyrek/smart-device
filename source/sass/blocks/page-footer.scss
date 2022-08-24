@@ -10,6 +10,7 @@
 .page-footer__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
 
   @include vp-1023 {
     display: block;
@@ -55,7 +56,7 @@
 .page-footer__social-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 215px;
+  max-width: 220px;
 }
 
 .page-footer__social-item {
@@ -90,9 +91,10 @@
 .page-footer__list {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
   max-width: 845px;
   flex-grow: 1;
-  padding-top: 5px;
+  padding-top: 4px;
 
   @include vp-1023 {
     display: grid;

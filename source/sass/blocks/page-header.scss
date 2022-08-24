@@ -76,10 +76,12 @@
 }
 
 .page-header__link {
-  display: block;
+  display: inline-block;
+  vertical-align: bottom;
   padding: 1px 5px 9px 35px;
   background-repeat: no-repeat;
   background-position: 0 0;
+  user-select: none;
 
   @include vp-1023 {
     width: 40px;

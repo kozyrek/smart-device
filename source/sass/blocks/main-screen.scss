@@ -7,8 +7,10 @@
   background-position: center;
   background-size: cover;
 
-  @include retina {
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-desktop@2x.jpg");
+  @include vp-1024 {
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-desktop@2x.jpg");
+    }
   }
 
   @include vp-1023 {
@@ -21,7 +23,7 @@
   }
 
   @include vp-767 {
-    padding: 151px 0 189px;
+    padding: 150px 0 190px;
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-mobile.jpg");
 
     @include retina {

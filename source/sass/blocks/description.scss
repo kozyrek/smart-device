@@ -6,6 +6,7 @@
   background-image: url("../img/background/about-us-icon.svg");
   background-repeat: no-repeat;
   background-position: 30px 20px;
+  min-height: 400px;
 
   @include vp-1023 {
     padding-top: 21px;
@@ -15,6 +16,7 @@
   }
 
   @include vp-767 {
+    min-height: auto;
     padding-top: 6px;
     background-image: none;
   }
@@ -92,10 +94,10 @@
 
   &:hover,
   &:focus {
-    outline: 1px solid $color-deep-sky-blue;
+    box-shadow: 0 0 0 1px $color-deep-sky-blue;
   }
 
   &:active {
-    outline: 2px solid $color-deep-sky-blue;
+    box-shadow: 0 0 0 2px $color-deep-sky-blue;
   }
 }
