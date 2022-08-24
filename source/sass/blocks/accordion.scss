@@ -114,7 +114,8 @@
 }
 
 .accordion__link {
-  display: block;
+  display: inline-block;
+  vertical-align: bottom;
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;

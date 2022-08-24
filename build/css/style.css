@@ -363,7 +363,8 @@ a {
 }
 
 .accordion__link {
-  display: block;
+  display: inline-block;
+  vertical-align: bottom;
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;
@@ -622,6 +623,7 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: block;
 }
 
 .products__link::before,
@@ -843,6 +845,12 @@ a {
   color: #ffffff;
   border: none;
   background-color: #041427;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
 }
 
 .feedback-form button:hover,
@@ -864,6 +872,10 @@ a {
   margin: auto 0 0;
   padding: 0 1px 0 35px;
   position: relative;
+  cursor: pointer;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
 }
 
 .feedback-form input[type="checkbox"] + label::before {
@@ -919,17 +931,35 @@ a {
   margin: 0 0 5px;
 }
 
+.feedback-form--modal input {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
 .feedback-form--modal textarea {
   margin: 0 0 6px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .feedback-form--modal button {
   max-width: 100%;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .feedback-form--modal input[type="checkbox"] {
   left: 50px;
   bottom: 37px;
+}
+
+.feedback-form--modal input[type="checkbox"] + label {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
 }
 
 .modal {
@@ -956,29 +986,11 @@ a {
   top: 15px;
   right: 15px;
   background-color: transparent;
+  background-image: url("../img/background/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 3px;
   cursor: pointer;
-}
-
-.modal .modal__close-button::before,
-.modal .modal__close-button::after {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: 5px;
-  width: 28px;
-  height: 1.2px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  -webkit-transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
-  -ms-transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
-  transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
-}
-
-.modal .modal__close-button::after {
-  -webkit-transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
-  -ms-transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
-  transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
 }
 
 .modal .modal__close-button:hover,
@@ -1026,6 +1038,7 @@ a {
   }
 
   .page-header {
+    position: static;
     padding: 20px 0 25px;
   }
 
@@ -1049,6 +1062,7 @@ a {
   }
 
   .main-screen {
+    margin-top: -100px;
     padding: 179px 0 205px;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/main-screen-tablet.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-tablet.jpg");
@@ -1247,7 +1261,7 @@ a {
   }
 
   .page-header {
-    padding: 10px 0 20px;
+    padding: 10px 0 10px;
   }
 
   .page-header__logo {
@@ -1269,6 +1283,7 @@ a {
   }
 
   .main-screen {
+    margin-top: -70px;
     padding: 150px 0 190px;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/main-screen-mobile.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/main-screen-mobile.jpg");
@@ -1579,21 +1594,33 @@ a {
 
   .feedback-form input {
     margin: 0 0 20px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
 
   .feedback-form textarea {
     margin: 0 0 30px;
     padding: 22px 15px 15px;
     min-height: 180px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
 
   .feedback-form button {
     max-width: none;
     margin: 0 auto 25px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
 
   .feedback-form input[type="checkbox"] + label {
     padding: 0 1px 0 30px;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
   }
 
   .feedback-form input[type="checkbox"] + label::before {

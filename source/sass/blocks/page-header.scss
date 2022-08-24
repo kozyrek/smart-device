@@ -13,11 +13,12 @@
   z-index: 10;
 
   @include vp-1023 {
+    position: static;
     padding: 20px 0 25px;
   }
 
   @include vp-767 {
-    padding: 10px 0 20px;
+    padding: 10px 0 10px;
   }
 }
 
