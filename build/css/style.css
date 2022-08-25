@@ -1541,6 +1541,7 @@ a {
   }
 
   .products__list {
+    max-width: 670px;
     margin: 0 auto;
   }
 
@@ -1562,6 +1563,10 @@ a {
     font-size: 18px;
     top: 26px;
     left: 31px;
+  }
+
+  .products img {
+    max-height: 250px;
   }
 
   .feedback-form {
